@@ -75,3 +75,33 @@ let person = {
 };
 console.log(typeof person);
 showMessage(person.age);
+
+showMessage('GET A GRIP');
+/// IFS
+if(5 === 10 || 5 !== 10){
+    showMessage('is true');
+}
+
+//falsy means false + 0 + empty string + null
+if(1.1 + 1.3 !== 2.4){
+    showMessage("true");
+}
+
+//to fix above do (1.1 + 1.3).toFixed(2)
+//note toFixed returns a string, so to keep it as number do +(1.1 +1.3).toFixed(2)
+
+if(1 =="1"){
+    showMessage(true);
+}
+//with == JS converts the type
+//using === its strict value
+
+let  ifPrice = 20;
+let ifMessage = ifPrice > 20 ? "Expensive" : "Cheap";
+showMessage(ifMessage);
+
+
+if(true){
+    var testVar = 'yes';
+}
+showMessage(testVar); // the var is not block scope but global, let and const are block scope
