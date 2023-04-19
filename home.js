@@ -105,3 +105,22 @@ if(true){
     var testVar = 'yes';
 }
 showMessage(testVar); // the var is not block scope but global, let and const are block scope
+
+
+//OBJECTS
+//access properties
+person.age = 32;
+person['age'] = 42;
+
+//function as properties
+let functionObject = {
+    message: 'test',
+    insideMethod: function(){
+        showMessage(this.message);
+    },
+    insideMethodParameter: function(parameterValue){
+        showMessage(parameterValue);
+    }
+}
+functionObject.insideMethod();
+functionObject.insideMethodParameter('test parameter');
