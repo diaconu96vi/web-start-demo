@@ -74,3 +74,26 @@ arrayTest.unshift(1);
 console.log(arrayTest);
 let arrayCopy = arrayTest.slice(1,2);
 console.log(arrayTest, arrayCopy);
+
+//filter
+let values = ['a','b','c'];
+const cFilter = values.filter(function(item){
+    return item >= 'b';
+});
+console.log(cFilter, values);
+console.log(values.indexOf('b'));
+
+const cFind = values.find(function(item){
+    return item === 'c';
+});
+console.log(cFind, values);
+
+//foreach
+values.forEach(function(item){
+    console.log(item);
+});
+
+//DOM ARRAY
+const containers = document.getElementsByClassName('container');
+console.log(containers);
+containers[2].classList.add('d-none');
